@@ -19,7 +19,7 @@ def generate_file_name(original_filename:str):
     return filename
 
 
-def authorization_is_valid(token):
+def authorization_is_valid(token:str):
     system_token = getenv("TOKEN")
     if system_token:
         return token == getenv("TOKEN")
@@ -48,19 +48,6 @@ def upload():
         return f"{filename}", 200
     else:
         return "Not Authorized", 401
-
-
-#@app.route("/delete/<image>", methods=["DELETE"])
-#def delete(image):
-#    if authorization_is_valid(request.headers.get("Authorization")):
-#        if path.exists(f"./images/{image}"):
-#            remove(f"./images/{image}")
-#            return "Image deleted", 200
-#        else:
-#            return "Image not found", 404
-#    else:
-#        return "Not Authorized", 401
-
 
 
 if __name__ == "__main__":
