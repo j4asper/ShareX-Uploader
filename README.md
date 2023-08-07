@@ -17,7 +17,17 @@ You may want to create a shared volume for your docker container to be able to a
 docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
 ```
 
+## Building docker image
+
+You can build the docker image from source by cloning this repo, and then run the command below.
+
+```console
+docker build --no-cache -t sharex-uploader .
+```
+
+Then you can set up the container in the same way as te previous section. Replace `jazper/sharex-uploader:latest` with `sharex-uploader` and the you should be good to go.
+
 ## Configuring ShareX
 
 In the ShareX main menu, click the "Destinations" tab in the left hand side panel. Then choose the option at the buttom "Custom uploader settings". Choose the option to import a config from a URl, and paste this URL into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-config.json`.  
-Then the base config should be loaded now, and you can now replace all instances of `example.com` to your domain.
+Then the base config should be loaded now, and you can now replace all instances of `example.com` to your domain. Remember to include the port of your docker container if it's different from `80` or `443`.
