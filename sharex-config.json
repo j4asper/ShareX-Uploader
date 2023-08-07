@@ -12,6 +12,5 @@
       "name": "{filename}"
     },
     "FileFormName": "image",
-    "URL": "https://example.com/{response}",
-    "DeletionURL": "https://example.com/delete/{response}"
+    "URL": "https://example.com/{response}"
   }
