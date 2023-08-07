@@ -1,0 +1,17 @@
+{
+    "Version": "15.0.0",
+    "Name": "ShareX-Uploader",
+    "DestinationType": "ImageUploader",
+    "RequestMethod": "POST",
+    "RequestURL": "https://example.com/upload",
+    "Headers": {
+      "Authorization": "your-auth-token"
+    },
+    "Body": "MultipartFormData",
+    "Arguments": {
+      "name": "{filename}"
+    },
+    "FileFormName": "image",
+    "URL": "https://example.com/{response}",
+    "DeletionURL": "https://example.com/delete/{response}"
+  }
