@@ -19,6 +19,8 @@ You may want to create a shared volume for your docker container to be able to a
 docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
 ```
 
+**Environment Variables you may want to change.**
+
 | Name                | Value  | Description                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------|
 | TOKEN               | string | Token needed to be able to upload images, if not set, everyone can upload to the server. |
@@ -38,3 +40,8 @@ Then you can set up the container in the same way as te previous section. Replac
 
 In the ShareX main menu, click the "Destinations" tab in the left hand side panel. Then choose the option at the buttom "Custom uploader settings". Choose the option to import a config from a URl, and paste this URL into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-config.json`.  
 Then the base config should be loaded now, and you can now replace all instances of `example.com` to your domain. Remember to include the port of your docker container if it's different from `80` or `443`.
+
+## To-Do
+
+- [ ] Add Delete endpoint with token authentication (Probably with web UI)
+- [ ] Add naming length performance table (Collisions)
