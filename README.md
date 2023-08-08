@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/j4asper/sharex-uploader?style=for-the-badge) ![Docker Pulls](https://img.shields.io/docker/pulls/jazper/sharex-uploader?style=for-the-badge&logo=Docker) ![Static Badge](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&label=Python&logo=Python)
+<a href="https://github.com/j4asper/ShareX-Uploader/blob/main/LICENSE"><img src="https://img.shields.io/github/license/j4asper/sharex-uploader?style=for-the-badge"></a> <a href="https://hub.docker.com/r/jazper/sharex-uploader"><img src="https://img.shields.io/docker/pulls/jazper/sharex-uploader?style=for-the-badge&logo=Docker"></a> <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&label=Python&logo=Python"></a>
 
 # ShareX Uploader
 
