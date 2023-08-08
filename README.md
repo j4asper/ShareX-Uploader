@@ -19,6 +19,11 @@ You may want to create a shared volume for your docker container to be able to a
 docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
 ```
 
+| Name                | Value  | Description                                                                              |
+|---------------------|--------|------------------------------------------------------------------------------------------|
+| TOKEN               | string | Token needed to be able to upload images, if not set, everyone can upload to the server. |
+| MAX_FILENAME_LENGTH | int    | Length of image names 5 or above is recommended. Default is 8.                           |
+
 ## Building docker image
 
 You can build the docker image from source by cloning this repo, and then run the command below.
