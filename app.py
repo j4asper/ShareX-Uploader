@@ -12,7 +12,7 @@ except FileExistsError:
 
 
 # Get file name length value
-MAX_FILENAME_LENGTH = int(getenv("TOKEN")) if getenv("TOKEN") else 8
+MAX_FILENAME_LENGTH = int(getenv("MAX_FILENAME_LENGTH")) if getenv("MAX_FILENAME_LENGTH") else 8
 
 TOKEN = getenv("TOKEN")
 
