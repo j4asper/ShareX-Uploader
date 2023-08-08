@@ -14,6 +14,7 @@ except FileExistsError:
 # Get file name length value
 MAX_FILENAME_LENGTH = int(getenv("MAX_FILENAME_LENGTH")) if getenv("MAX_FILENAME_LENGTH") else 8
 
+# Get uploading auth token
 TOKEN = getenv("TOKEN")
 
 
@@ -37,6 +38,10 @@ def authorization_is_valid(auth_token:str):
 app = Flask(__name__)
 
 
+##################
+#   View Image   #
+##################
+
 @app.route("/<image>", methods=["GET"])
 def view_image(image):
     if path.exists(f"./images/{image}"):
@@ -44,6 +49,10 @@ def view_image(image):
     else:
         return "Image not found", 404
 
+
+##################
+#  Upload Image  #
+##################
 
 @app.route("/upload", methods=["POST"])
 def upload():
