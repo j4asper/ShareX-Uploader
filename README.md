@@ -1,6 +1,8 @@
+![GitHub](https://img.shields.io/github/license/j4asper/sharex-uploader?style=for-the-badge) ![Docker Pulls](https://img.shields.io/docker/pulls/jazper/sharex-uploader?style=for-the-badge&logo=Docker) ![Static Badge](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&label=Python&logo=Python)
+
 # ShareX Uploader
 
-[ShareX](https://getsharex.com/) Image Uploader made to be hosted in a Docker container. [ShareX](https://getsharex.com/) is an Open Source screenshotting tool. It let's you configure it to uploade your screenshots to large image hosting sites, or to your own web instance to flex on your friends. This allows you to have your own image links such as `https://i.example.com/sdflkj3497.png`.
+[ShareX](https://getsharex.com/) Image Uploader made to be hosted in a Docker container. [ShareX is an Open Source screenshotting tool](https://getsharex.com/). It let's you configure it to uploade your screenshots to large image hosting sites, or to your own web instance to flex on your friends. This allows you to have your own image links such as `https://i.example.com/Ml9dGIg2yIo.png`.
 
 ## Setting up the docker container
 
