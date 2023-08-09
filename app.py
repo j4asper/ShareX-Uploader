@@ -12,7 +12,7 @@ except FileExistsError:
 
 
 # Get file name length value
-MAX_FILENAME_LENGTH = int(getenv("MAX_FILENAME_LENGTH")) if getenv("MAX_FILENAME_LENGTH") else 8
+MAX_FILENAME_LENGTH = int(getenv("MAX_FILENAME_LENGTH")) if getenv("MAX_FILENAME_LENGTH") else 6
 
 # Get uploading auth token
 TOKEN = getenv("TOKEN")
