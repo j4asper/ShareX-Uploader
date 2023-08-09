@@ -2,7 +2,17 @@
 
 # ShareX Uploader
 
-[ShareX](https://getsharex.com/) Image Uploader made to be hosted in a Docker container. [ShareX is an Open Source screenshotting tool](https://getsharex.com/). It let's you configure it to uploade your screenshots to large image hosting sites, or to your own web instance to flex on your friends. This allows you to have your own image links such as `https://i.example.com/Ml9dGIg2yIo.png`.
+[ShareX](https://getsharex.com/) Image Uploader made to be hosted in a Docker container. [ShareX is an Open Source screenshotting tool](https://getsharex.com/). It let's you configure it to uploade your screenshots to large image hosting sites, or to your own web instance to flex on your friends. This allows you to have your own image links such as `https://i.example.com/Ml9dGI.png`.  
+
+This ShareX Uploader supports image uploading and file uploading functionality.  
+
+## Table of contents
+
+- [Setting up the docker container](#setting-up-the-docker-container)
+  - [Environment Variables](#environment-variables)
+- [Building docker image](#building-docker-image)
+- [Configuring ShareX](#configuring-sharex)
+- [To-Do](#to-do)
 
 ## Setting up the docker container
 
@@ -19,12 +29,14 @@ You may want to create a shared volume for your docker container to be able to a
 docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
 ```
 
-**Environment Variables you may want to change.**
+### Environment Variables
+
+Environment Variables you may want to change. It is highly recommended to change the TOKEN, to prevent spam uploads to your instance.
 
 | Name                | Value  | Description                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------|
 | TOKEN               | string | Token needed to be able to upload images, if not set, everyone can upload to the server. |
-| MAX_FILENAME_LENGTH | int    | Length of image names 5 or above is recommended. Default is 8.                           |
+| MAX_FILENAME_LENGTH | int    | Length of image names 4 or above is recommended. Default is 6.                           |
 
 ## Building docker image
 
@@ -45,3 +57,4 @@ Then the base config should be loaded now, and you can now replace all instances
 
 - [ ] Add Delete endpoint with token authentication (Probably with web UI)
 - [ ] Add naming length performance table (Collisions)
+- [ ] Add pastebin-like functionality
