@@ -37,6 +37,9 @@ def authorization_is_valid(auth_token:str):
 
 app = Flask(__name__)
 
+# Get MAX_UPLOAD_SIZE and set it to MAX_CONTENT_LENGTH for security reasons
+app.config["MAX_CONTENT_LENGTH"] = (int(getenv("MAX_UPLOAD_SIZE")) if getenv("MAX_UPLOAD_SIZE") else 10) * 1024 * 1024
+
 
 @app.route("/", methods=["GET"])
 def home():
