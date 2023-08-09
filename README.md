@@ -26,7 +26,7 @@ docker run -d -e TOKEN=password -p 8000:8000 jazper/sharex-uploader:latest
 You may want to create a shared volume for your docker container to be able to access the images on the docker instance easier, by binding the `images` folder to a folder on your host machine. Make sure to edit `/path/to/your/folder`. This will be the folder that contains all the images uploaded to the sharex uploader instance.
 
 ```console
-docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
+docker run -d -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
 ```
 
 ### Environment Variables
@@ -38,6 +38,14 @@ Environment Variables you may want to change. It is highly recommended to change
 | TOKEN               | Optional    | string | Token needed to be able to upload images, if not set, everyone can upload to the server.                                |
 | MAX_FILENAME_LENGTH | Optional    | int    | Length of image names 4 or above is recommended. Default is 6.                                                          |
 | MAX_UPLOAD_SIZE     | Optional    | int    | Max size of uploaded files in MB, by default it's 10 mb, but you should you increase this if you plan to upload videoes |
+
+The docker run command would be the following, if you were to set all the environment vars to the default value.
+
+```console
+docker run -d -e TOKEN=your-password-here -e MAX_FILENAME_LENGTH=6 -e MAX_UPLOAD_SIZE=10 -p 8000:8000 jazper/sharex-uploader:latest
+```
+
+You can change the values as you wish, or remove them if you just want to use the default value.
 
 ## Building docker image
 
