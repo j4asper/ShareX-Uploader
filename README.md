@@ -56,5 +56,4 @@ Then the base config should be loaded now, and you can now replace all instances
 ## To-Do
 
 - [ ] Add Delete endpoint with token authentication (Probably with web UI)
-- [ ] Add naming length performance table (Collisions)
 - [ ] Add pastebin-like functionality
