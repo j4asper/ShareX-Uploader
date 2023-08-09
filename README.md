@@ -33,10 +33,11 @@ docker run -d -e TOKEN=password -p 8000:8000 -v /ShareX-Uploader/images:/path/to
 
 Environment Variables you may want to change. It is highly recommended to change the TOKEN, to prevent spam uploads to your instance.
 
-| Name                | Value  | Description                                                                              |
-|---------------------|--------|------------------------------------------------------------------------------------------|
-| TOKEN               | string | Token needed to be able to upload images, if not set, everyone can upload to the server. |
-| MAX_FILENAME_LENGTH | int    | Length of image names 4 or above is recommended. Default is 6.                           |
+| Name                | Requirement | Value  | Description                                                                                                             |
+|---------------------|-------------|--------|-------------------------------------------------------------------------------------------------------------------------|
+| TOKEN               | Optional    | string | Token needed to be able to upload images, if not set, everyone can upload to the server.                                |
+| MAX_FILENAME_LENGTH | Optional    | int    | Length of image names 4 or above is recommended. Default is 6.                                                          |
+| MAX_UPLOAD_SIZE     | Optional    | int    | Max size of uploaded files in MB, by default it's 10 mb, but you should you increase this if you plan to upload videoes |
 
 ## Building docker image
 
