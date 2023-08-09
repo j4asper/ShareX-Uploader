@@ -38,6 +38,11 @@ def authorization_is_valid(auth_token:str):
 app = Flask(__name__)
 
 
+@app.route("/", methods=["GET"])
+def home():
+    return "This is an instance of the ShareX Uploader made by Jasper, you can find the repository here: https://github.com/j4asper/ShareX-Uploader"
+
+
 ##################
 #   View Image   #
 ##################
