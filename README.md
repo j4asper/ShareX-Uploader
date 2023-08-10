@@ -12,6 +12,7 @@ This ShareX Uploader supports image uploading and file uploading functionality.
   - [Environment Variables](#environment-variables)
 - [Building docker image](#building-docker-image)
 - [Configuring ShareX](#configuring-sharex)
+  - [Image and File Uploader](#image-and-file-uploader)
 - [To-Do](#to-do)
 
 ## Setting up the docker container
@@ -33,11 +34,11 @@ docker run -d -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazpe
 
 Environment Variables you may want to change. It is highly recommended to change the TOKEN, to prevent spam uploads to your instance.
 
-| Name                | Requirement | Value  | Description                                                                                                             |
-|---------------------|-------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| TOKEN               | Optional    | string | Token needed to be able to upload images, if not set, everyone can upload to the server.                                |
-| MAX_FILENAME_LENGTH | Optional    | int    | Length of image names 4 or above is recommended. Default is 6.                                                          |
-| MAX_UPLOAD_SIZE     | Optional    | int    | Max size of uploaded files in MB, by default it's 10 mb, but you should you increase this if you plan to upload videoes |
+| Name                | Requirement | Value  | Default Value | Description                                                                              |
+|---------------------|-------------|--------|--------|-------------------------------------------------------------------------------------------------|
+| TOKEN               | Optional    | string | `None` | Token needed to be able to upload images, if not set, everyone can upload to the server.        |
+| MAX_FILENAME_LENGTH | Optional    | int    | 6      | Length of image names 4 or above is recommended.                                                |
+| MAX_UPLOAD_SIZE     | Optional    | int    | 10     | Max size of uploaded files in MB, you should you increase this if you plan to upload videoes    |
 
 The docker run command would be the following, if you were to set all the environment vars to the default value.
 
@@ -59,10 +60,14 @@ Then you can set up the container in the same way as te previous section. Replac
 
 ## Configuring ShareX
 
+### Image and File Uploader
+
 In the ShareX main menu, click the "Destinations" tab in the left hand side panel. Then choose the option at the buttom "Custom uploader settings". Choose the option to import a config from a URl, and paste this URL into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-config.json`.  
 Then the base config should be loaded now, and you can now replace all instances of `example.com` to your domain. Remember to include the port of your docker container if it's different from `80` or `443`.
+Now to use the custom uploader, click the "Destinations" tab again, then when hovering over "Image uploader" you can select "Custom Image Uploader". You can also use the custom image uplaoder to upload files, when in the "Destinations", select "File uploader" and then select "Custom File Uploader", this will use the image uploader as if it were a file uploader.
 
 ## To-Do
 
 - [ ] Add Delete endpoint with token authentication (Probably with web UI)
+- [ ] Add URL-Shortener functionality
 - [ ] Add pastebin-like functionality
