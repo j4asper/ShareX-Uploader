@@ -2,9 +2,9 @@
 
 # ShareX Uploader
 
-[ShareX](https://getsharex.com/) Image Uploader made to be hosted in a Docker container. [ShareX is an Open Source screenshotting tool](https://getsharex.com/). It let's you configure it to uploade your screenshots to large image hosting sites, or to your own web instance to flex on your friends. This allows you to have your own image links such as `https://i.example.com/Ml9dGI.png`.  
+[ShareX](https://getsharex.com/) is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
 
-This ShareX Uploader supports image uploading and file uploading functionality.  
+If you choose to use this ShareX Uploader, you will be able to upload images to your own server, and have cool links to them such as this one `https://i.jazper.dk/EA0tdF.png`.
 
 ## Table of contents
 
