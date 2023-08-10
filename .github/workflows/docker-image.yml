@@ -1,0 +1,32 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build --no-cache -t jazper/sharex-uploader:latest .
+
+    - name: Push Docker Image
+      # You may pin to the exact commit or the version.
+      # uses: julioarruda/pushimagetoregistry@3679a680bb9d6cbf3c1de8aeed592faf1e140c8b
+      uses: julioarruda/pushimagetoregistry@v1
+      with:
+        # Username Name with push permission
+        acr-tokenname: PWD
+        # Token/PWD with push permission
+        acr-token: ${{ secrets.DOCKER_PASSWORD }}
+        # Docker Account Name
+        acr-account: jazper
+        # Docker Image Name
+        acr-imagename: jazper/sharex-uploader:latest
