@@ -3,6 +3,11 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - '.gitignore'
+      - '.github/**'
+      - 'README.md'
+      - 'sharex-config.json'
   pull_request:
     branches: [ "main" ]
 
