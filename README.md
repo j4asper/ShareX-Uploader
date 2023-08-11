@@ -13,6 +13,7 @@ If you choose to use this ShareX Uploader, you will be able to upload images to 
 - [Building docker image](#building-docker-image)
 - [Configuring ShareX](#configuring-sharex)
   - [Image and File Uploader](#image-and-file-uploader)
+  - [URL Shortener](#url-shortener)
 - [To-Do](#to-do)
 
 ## Setting up the docker container
@@ -39,6 +40,7 @@ Environment Variables you may want to change. It is highly recommended to change
 | TOKEN               | Optional    | string | `None` | Token needed to be able to upload images, if not set, everyone can upload to the server.        |
 | MAX_FILENAME_LENGTH | Optional    | int    | 6      | Length of image names 4 or above is recommended.                                                |
 | MAX_UPLOAD_SIZE     | Optional    | int    | 10     | Max size of uploaded files in MB, you should you increase this if you plan to upload videoes    |
+| SHORT_URL_LENGTH    | Optional    | int    | 4      | Length of shortened url "codes"                                                                 |
 
 The docker run command would be the following, if you were to set all the environment vars to the default value.
 
@@ -62,9 +64,14 @@ Then you can set up the container in the same way as te previous section. Replac
 
 ### Image and File Uploader
 
-In the ShareX main menu, click the "Destinations" tab in the left hand side panel. Then choose the option at the buttom "Custom uploader settings". Choose the option to import a config from a URl, and paste this URL into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-config.json`.  
+In the ShareX main menu, click the "Destinations" tab in the left hand side panel. Then choose the option at the buttom "Custom uploader settings". Choose the option to import a config from a URL, and paste this URL into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-configs/image%20and%20file%20uploader.json`.  
 Then the base config should be loaded now, and you can now replace all instances of `example.com` to your domain. Remember to include the port of your docker container if it's different from `80` or `443`.
 Now to use the custom uploader, click the "Destinations" tab again, then when hovering over "Image uploader" you can select "Custom Image Uploader". You can also use the custom image uplaoder to upload files, when in the "Destinations", select "File uploader" and then select "Custom File Uploader", this will use the image uploader as if it were a file uploader.
+
+### URL Shortener
+
+Go to the Custom Uploader Settings, the same way as in the above section. Then import a config from URL and paste this link into the text field: `https://raw.githubusercontent.com/j4asper/ShareX-Uploader/main/sharex-configs/url%20shortener.json`. Remember to change `example.com` to fit your own domain.
+Then in the Destinations tab, hover over the URL Shortener, and select Custom URL Shortener.
 
 ## To-Do
 
