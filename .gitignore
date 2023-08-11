@@ -161,3 +161,6 @@ cython_debug/
 
 # Don't include image folder
 /images
+
+# Don't include short_url database
+short_urls.db
