@@ -1,0 +1,15 @@
+{
+    "Version": "15.0.0",
+    "Name": "ShareX-Uploader Shortener",
+    "DestinationType": "URLShortener",
+    "RequestMethod": "POST",
+    "RequestURL": "https://example.com/shorten",
+    "Headers": {
+      "Authorization": null
+    },
+    "Body": "MultipartFormData",
+    "Arguments": {
+      "url": "{input}"
+    },
+    "URL": "https://example.com/{response}"
+}
