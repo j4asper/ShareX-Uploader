@@ -27,7 +27,7 @@ If you want the instance to run on port 80, then change `8000:8000` to `80:8000`
 docker run -d -e TOKEN=password -p 8000:8000 jazper/sharex-uploader:latest
 ```
 
-You may want to create a shared volume for your docker container to be able to access the images on the docker instance easier, by binding the `images` folder to a folder on your host machine. Make sure to edit `/path/to/your/folder`. This will be the folder that contains all the images uploaded to the sharex uploader instance.
+You may want to create a shared volume for your docker container to be able to access the images on the docker instance easier, by binding the `images` folder to a folder on your host machine. Make sure to edit `/path/to/your/folder`. This will be the folder that contains all the images uploaded to the sharex uploader instance. **This is highly recommended! If you were to update your docker container, without having a volume, it would just delete all your images.**
 
 ```console
 docker run -d -p 8000:8000 -v /ShareX-Uploader/images:/path/to/your/folder jazper/sharex-uploader:latest
