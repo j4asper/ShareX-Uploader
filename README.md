@@ -76,5 +76,5 @@ Then in the Destinations tab, hover over the URL Shortener, and select Custom UR
 ## To-Do
 
 - [ ] Add Delete endpoint with token authentication (Probably with web UI)
-- [ ] Add URL-Shortener functionality
+- [x] Add URL-Shortener functionality
 - [ ] Add pastebin-like functionality
