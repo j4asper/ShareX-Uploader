@@ -1,12 +1,12 @@
 <a href="https://github.com/j4asper/ShareX-Uploader/blob/main/LICENSE"><img src="https://img.shields.io/github/license/j4asper/sharex-uploader?style=for-the-badge"></a> <a href="https://hub.docker.com/r/jazper/sharex-uploader"><img src="https://img.shields.io/docker/pulls/jazper/sharex-uploader?style=for-the-badge&logo=Docker"></a> <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&label=Python&logo=Python"></a>
 
-![Demo Image](https://i.jazper.dk/EsCJgx.png)
-
 # ShareX Uploader
 
 [ShareX](https://getsharex.com/) is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
 
 If you choose to use this ShareX Uploader, you will be able to upload images to your own server, and have cool links to them such as this one `https://i.jazper.dk/EsCJgx.png`.
+
+![Demo Image](https://i.jazper.dk/EsCJgx.png)
 
 ## Table of contents
 
